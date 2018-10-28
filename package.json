@@ -1,0 +1,26 @@
+{
+  "name": "desafio-todo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon --inspect index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^2.0.1",
+    "bluebird": "^3.5.1",
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "mongoose": "^5.0.16"
+  },
+  "engines": {
+    "node": "8.9.1",
+    "npm": "5.6.0"
+  }
+}
