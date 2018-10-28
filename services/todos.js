@@ -8,12 +8,20 @@ const byId = async (id) => {
   return await Todos.findOne({ _id: id });
 };
 
+const allPending = async () => {
+  return await Todos.find({ done: false });
+}
+
+const done = async () => {
+  return await Todos.find({ done: true });
+}
+
 const Create = async (data) => {
   return await Todos.create(data);
 };
 
-const Update = async(id, name) => {
-  return await Todos.updateOne({ _id: id }, { $set: { name } });
+const MarkDone = async(id, done) => {
+  return await Todos.updateOne({ _id: id }, { $set: { done } });
 };
 
 const Delete = async(id) => {
@@ -23,7 +31,9 @@ const Delete = async(id) => {
 module.exports = {
   all,
   byId,
+  allPending,
+  done,
   Create,
-  Update,
+  MarkDone,
   Delete
 }
